@@ -1,0 +1,119 @@
+.card{
+    display:flex;
+    flex-direction: column;
+    border-radius: var(--br-03);
+
+
+   
+    .card-header{
+        flex-grow: 2;
+        padding-block-start:4rem ;
+        padding-block-end: 1rem;
+        padding-inline: 1.5rem;
+       
+            p {
+                opacity: 0.7;
+                font-weight: medium;
+            }
+        }
+
+        .card__img-container{
+            display: flex;
+            flex-direction: column;
+            top: 25%;
+            right: 3%;
+           
+   
+            .card_icon_container{
+           
+                border-top: 10px solid white;
+           
+                .card_icon_holder{
+                   
+                    .card_icon {
+                        border-bottom: 5px solid purple;
+                        position: relative;
+                        width: 6rem;
+                        height: 6rem;
+                       
+       
+                        svg{
+                           
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 70%;
+           
+                        }
+                       
+                    }
+
+                }
+           
+            }
+           
+        }
+   
+        .card-main{
+        flex-grow: 3;
+        padding-inline: 1.5rem;
+        padding-block: 2.5rem;
+        }
+       
+        .card-footer{
+        flex-grow: 1;
+        padding-block: 1rem;
+        display:flex;
+        justify-content: end;
+        padding-inline-end:1.5rem ;
+
+       
+            .btn-test {
+                color: white;
+                border: none;
+                font-size: 13px;
+                border-radius: .6rem;
+                box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.5),
+                1px 1px 2px 0px rgba(255,255,255,0.3) inset;
+                padding-inline: 1.2rem;
+                padding-block: .7rem;
+           
+            }
+
+
+        }
+   
+}
+
+
+@media only screen and (min-width: 996px){
+
+    .card{
+
+        .card-header{
+            min-height: 28%;
+            padding-block-start:4rem ;
+            padding-block-end: 5rem;    
+     
+        }
+   
+        .card-main{
+            min-height: 58%;
+        }
+   
+        .card-footer{
+            min-height: 14%;
+
+            .btn-test{
+                padding-inline: 1.8rem;
+                font-size: 16px;
+                padding-block: 0.0961rem;  
+            }
+           
+        }
+   
+    }
+
+
+}

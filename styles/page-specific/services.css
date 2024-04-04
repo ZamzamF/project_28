@@ -1,0 +1,77 @@
+/* Initial state of the sections */
+.fade-in-section {
+    opacity: 0;
+    transition: opacity 1s ease-out; /* Adjust the duration and easing as needed */
+}
+
+/* Apply the fade-in effect when the 'active' class is present */
+.fade-in-section.active {
+    opacity: 1;
+}
+
+
+
+.service-header-bg{ 
+    background:
+    linear-gradient(hsla(208, 50%, 15%, 1) 2%, hsla(208, 50%, 15%, 0) 50%),
+    
+    linear-gradient(0deg,  hsla(328, 70%, 75%, 1), hsla(328, 70%, 75%, 0) 70%),
+
+    linear-gradient(45deg,  hsla(328, 40%, 60%, 1), hsla(328, 40%, 60%, 0) 60%),
+
+    linear-gradient(90deg, hsla(328, 40%, 60%, 1), hsla(328, 40%, 60%, 0) 70%),
+
+    linear-gradient(135deg,  hsla(328, 60%, 90%, 1), hsla(328, 60%, 90%, 0) 70%),
+
+    linear-gradient(180deg, var(--white), hsla(24, 40%, 60%, 1), hsla(24, 40%, 60%, 0) 70%);
+  
+    transition: all 300ms ease-in-out;
+    padding-top: 10rem;
+    padding-block-end: 10rem;
+}
+
+.service-header-skew{
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% calc(100% - (100vw * .1)),
+        0 100%
+      );
+      transition: clip-path 500ms ease-in-out;
+}
+
+.section-icon{
+    width: 13%;
+    
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: var(--white);
+
+    svg{
+        transform: translateY(5px);
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .service-header-skew {
+        padding-block-end: calc(100vw * .10);
+    }
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1535px) {
+    .section-icon {
+        width: 10%;
+    }
+}
+
+@media only screen and (min-width: 1536px) {
+    .section-icon {
+        width: 8%;
+    }
+}
+  
+
+  
+

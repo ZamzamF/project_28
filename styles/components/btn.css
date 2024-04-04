@@ -1,0 +1,40 @@
+.btn{
+    min-width: 104px;
+    border-radius: .4rem;
+    border: none;
+    font-weight: 700;
+    padding: 1rem 2rem; 
+    font-size: 1rem;
+    cursor: pointer;
+
+     a{
+        text-decoration: none; 
+        color: white;
+    }
+    
+}
+
+.btn--primary {
+    background-color: hsl(var(--hue-3), 20%, 90%);
+    box-shadow: 0 0 0 1pt hsl(var(--hue-1), 50%, 15%);
+    transform: translate(50%, 50%) scale(1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover{
+        background-color: hsl(var(--hue-1), 50%, 15%);
+        transform: translate(50%, 50%) scale(1.2);
+
+        a{
+            color:hsl(var(--hue-3), 20%, 90%) ;
+        }
+    }
+
+    a{
+        color:  hsl(var(--hue-1), 50%, 15%);
+        &:hover{
+            color:hsl(var(--hue-3), 20%, 90%) ;
+            background-color: hsl(var(--hue-1), 50%, 15%);
+        }
+    }
+}
+
